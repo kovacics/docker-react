@@ -7,3 +7,8 @@ before_install:
 
 script:
   - docker run -e CI=true kovacics/docker-react npm run test
+
+deploy:
+  provider: heroku
+  app: docker-react-kovacics
+  api_key: $API_KEY
